@@ -8,7 +8,7 @@ const DishDetails = (props) => {
                   <Card style={{ margin: "10px", padding: "2px" }}>
                         <CardBody >
                               <p>{props.dish.name} </p>
-                              <CardImg width="100%" alt={props.dish.name} src={props.dish.image}  >
+                              <CardImg width="100%" src={props.dish.image}  >
 
                               </CardImg>
                               <CardImgOverlay>
@@ -28,7 +28,7 @@ const DishDetails = (props) => {
                                     <p >price: {props.dish.price} </p>
 
                                     <hr />
-                                    <LoadComments comments={props.dish.comments} />
+                                    <LoadComments comments={props.comments} />
                               </div>
 
                         </CardBody>

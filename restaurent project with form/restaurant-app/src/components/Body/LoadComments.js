@@ -3,7 +3,7 @@ import dateFormat, { masks } from "dateformat";
 import { Card, CardImg, CardImgOverlay, CardBody, CardTitle } from 'reactstrap';
 
 const LoadComments = (props) => {
-      console.log(props);
+
 
       return (
             props.comments.map(comment => {

@@ -3,11 +3,14 @@ import Navigation from '../Header/Navigation';
 import DISHES from '../../data/Dishes';
 import MenuItem from './MenuItem';
 import DishDetails from './DishDetails';
+import Comments from '../../data/Comments';
+
 import { Modal, CardGroup, ModalBody, Card, CardColumns, ModalFooter, Button } from 'reactstrap';
 
 class Menu extends Component {
       state = {
             dishes: DISHES,
+            comments: Comments,
             selctedDish: null,
             modelOpen: false
       }
@@ -28,12 +31,18 @@ class Menu extends Component {
 
 
       render() {
+            document.title = "Menu";
+
+
             let seletedADish = null;
             // if user clicks on a dish,
             // then this variable is not null
 
             if (this.state.selctedDish) {
-                  seletedADish = <DishDetails dish={this.state.selctedDish} />
+                  const comments = this.state.comments.filter((comment) => {
+                        return comment.dishId === this.state.selctedDish.id;
+                  })
+                  seletedADish = <DishDetails dish={this.state.selctedDish} comments={comments} />
             }
 
 
@@ -54,6 +63,7 @@ class Menu extends Component {
                               <Modal isOpen={this.state.modelOpen}>
                                     <ModalBody>
                                           {seletedADish}
+                                          {/* sending the one obj that selected */}
 
                                     </ModalBody>
                                     <ModalFooter>
