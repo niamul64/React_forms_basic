@@ -21,3 +21,9 @@
 # 2. Uncontrolled From (collect data from input field)
 
 <img src="picS/uncontrolled form.JPG"  width="70%">
+
+#3 . react redux form: see 3 videos (in this reposetory)
+### before that need to see: urls:
+
+	#### https://github.com/niamul64/Redux_react
+	#### https://github.com/niamul64/Loading-icon-MiddleWare-Advance-redux-react-
